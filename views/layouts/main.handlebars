@@ -1,0 +1,33 @@
+<!-- ./views/layouts/main.handlebars: 我們就可以開始撰寫網頁佈局的部分，而這裡的內容會在每一個頁面中都出現 -->
+{{!-- 使用 handlebars 作為樣板引擎的方便之處在於，它可以用 HTML 語法直接撰寫這支檔案，但又添加許多原本 HTML 沒有的功能。 --}}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  
+  <!-- link css files here -->
+  <link rel="stylesheet" href="/stylesheets/bootstrap.css">
+</head>
+
+<body>
+  <!-- navigation -->
+  <nav class="navbar navbar-dark bg-dark">
+    <div class="container">
+      <a class="navbar-brand" href="#">Movie List</a>
+    </div>
+  </nav>
+
+  <!-- partial templates will replace the part of "body" here -->
+  {{!-- 局部樣板的內容都放在這裡顯示。 --}}
+  {{{ body }}}
+
+  <!-- include javascript files here -->
+  <script src="/javascripts/popper.js"></script>
+  <script src="/javascripts/bootstrap.js"></script>
+</body>
+
+</html>
